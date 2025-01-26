@@ -14,5 +14,8 @@ func main() {
 
 	r.GET("/tasks", handlers.GetTasks)
 	r.POST("/addTask", handlers.AddTask)
+	r.GET("/tasks/:id", handlers.GetTaskWithId)
+	r.PUT("/tasks/:id", handlers.UpdateTask)
+	r.DELETE("/task/:id", handlers.DeleteTask)
 	r.Run(":8080")
 }
