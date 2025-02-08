@@ -8,3 +8,9 @@ type Task struct {
 	Description string `json:"description"`
 	Status      bool   `json:"status"`
 }
+
+type User struct {
+	gorm.Model
+	Username string `json:"username" gorm:"unique"`
+	Password string `json:"password"`
+}

@@ -24,7 +24,7 @@ func InitDB() *gorm.DB {
 }
 
 func MigrateDB(db *gorm.DB) {
-	if err := db.AutoMigrate(&Task{}); err != nil {
+	if err := db.AutoMigrate(&Task{}, &User{}); err != nil {
 		log.Fatal("Error migrating")
 	}
 	fmt.Println("Successful migrating")
